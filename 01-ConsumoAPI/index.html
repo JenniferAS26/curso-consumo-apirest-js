@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatitos Aleatorios</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kitty App</h1>
+    </header>
+    <main>
+        <span id="error"></span>
+        <section class="wrapper-s uploading-kitty" id="uploadingCat">
+            <h2>Sube la foto de tu gato</h2>
+            <form id="uploadingForm">
+                <input type="file" name="file" id="file">
+                <button type="button" onclick="uploadCatPhoto()">Subir la foto de tu gato</button>
+            </form>
+        </section>
+        <section class="wrapper-s card-container">
+            <div class="img-card">
+                <h2>Random Kitty</h2>
+                <img id="img1" class="image" alt="Foto gatito aleatorio">
+                <button id="btn1" class="primary-button">Guardar como favorito</button>
+            </div>
+            <div class="img-card">
+                <h2>Random Kitty</h2>
+                <img id="img2" class="image" alt="Foto gatito aleatorio">
+                <button id="btn2" class="primary-button">Guardar como favorito</button>
+            </div>
+            <div class="img-card">
+                <h2>Random Kitty</h2>
+                <img id="img3" class="image" alt="Foto gatito aleatorio">
+                <button id="btn3" class="primary-button">Guardar como favorito</button>
+            </div>
+            <button onclick="loadRandomCat()" class="primary-button btn-cat">I want a cat!</button>
+        </section>
+        <section id="favCat" class="wrapper-s favorites-kitties">
+            <div class="img-card">
+                <h2>Favorito</h2>
+                <img id="img-4" class="image" alt="Foto gatito aleatorio">
+                <button class="primary-button">Sacar de favoritos</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
